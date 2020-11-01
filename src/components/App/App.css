@@ -17,3 +17,13 @@
   font-size: large;
 }
 
+.formInput{
+  border: 1px solid black;
+  width: 300px;
+  margin: auto;
+}
+
+.nextButton{
+  padding: 15px 32px;
+  flex: auto;
+}
