@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import {HashRouter as Router, Route} from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -28,6 +27,7 @@ class App extends Component {
           <Comments/>
           <Understanding/>
           <FeedbackStart/> */}
+          {/* <Review/> */}
           <br/>
         </div>
         <Route exact path="/" component={FeedbackStart}/>
@@ -36,6 +36,7 @@ class App extends Component {
         <Route path="/supported" component={Supported}/>
         <Route path="/comments" component={Comments}/>
         <Route path="/review" component={Review}/>
+        <Route path="/confirmation" component={Confirmation}
       </Router>
     );
   }
