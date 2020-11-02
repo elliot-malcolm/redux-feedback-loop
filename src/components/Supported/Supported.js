@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Supported.css'
 
 class Supported extends Component {
     state = {
@@ -17,8 +18,8 @@ class Supported extends Component {
     }
 
     submitSupport = () => {
-        if (Number(this.state.support) < 1 || Number(this.state.support) > 5) {
-            alert ('Please enter a valid rating between 1 and 5')
+        if (Number(this.state.support) < 1 || Number(this.state.support) > 5 || this.state.support === '' ) {
+            alert ('Please enter a valid rating between 1 and 5');
         } else {
         this.props.dispatch({
             type:'SUPPORTED_FEEDBACK', payload: this.state.support})

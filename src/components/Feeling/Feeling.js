@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Feelings.css'
 
 class Feeling extends Component {
 
@@ -18,7 +19,7 @@ class Feeling extends Component {
     }
 
     submitFeels = () => {
-        if (Number(this.state.feeling) < 1 || Number(this.state.feeling) > 5) {
+        if (Number(this.state.feeling) < 1 || Number(this.state.feeling) > 5 || this.state.feeling === '' ) {
             alert ('Please enter a valid rating between 1 and 5')
         }
         else {        

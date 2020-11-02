@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Understanding.css'
 
 class Understanding extends Component {
 
@@ -18,7 +19,7 @@ class Understanding extends Component {
     }
 
     submitUnderstanding = () => {
-        if (Number(this.state.understanding) < 1 || Number(this.state.understanding) > 5) {
+        if (Number(this.state.understanding) < 1 || Number(this.state.understanding) > 5 || this.state.understanding === '' ) {
             alert ('Please enter a valid rating between 1 and 5')
         } else {
         this.props.dispatch({
