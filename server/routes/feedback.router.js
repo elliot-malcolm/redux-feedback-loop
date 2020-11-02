@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
     let feeling = Number(req.body.feeling);
     let understanding = Number(req.body.understanding);
     let support = Number(req.body.support);
-    let comments = req.body.comments;
+    let comments = req.body.comment;
 
     let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
     VALUES($1, $2, $3, $4);`;
