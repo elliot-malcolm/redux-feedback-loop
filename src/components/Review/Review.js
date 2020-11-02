@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 class Review extends Component {
   render() {
     return (
-            <h1> Review </h1>
+            <h1> Review your answers! </h1>
     );
   }
 }

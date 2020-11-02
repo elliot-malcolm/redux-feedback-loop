@@ -8,6 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 
 // const feedbackData 
+
     // if action type = FEELING
     // takes in payload
 
@@ -20,7 +21,7 @@ import registerServiceWorker from './registerServiceWorker';
     // else if action type = SUPPORTED
     // takes in payload
 
-    
+
 const reduxStore = createStore (
     combineReducers({
     }),
