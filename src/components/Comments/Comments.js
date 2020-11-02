@@ -29,9 +29,6 @@ class Comments extends Component {
             <div className="formInput">
                     <h1>Any comments you want to leave?</h1>
                     <form onSubmit={this.submitComment}>
-                    <label htmlFor='Comments'>
-                        Any comments you want to leave?
-                    </label>
                     <p><input 
                     type="text"
                     placeholder="Comments here!"

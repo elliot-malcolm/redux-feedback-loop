@@ -33,9 +33,6 @@ class Understanding extends Component {
             <div className="formInput">
                     <h1>How well are you understanding the content?</h1>
                     <form onSubmit={this.submitUnderstanding}>
-                    <label htmlFor='Comprehension'>
-                        How well are you understanding the content?
-                    </label>
                     <p><input 
                     type="number"
                     placeholder="(from 1-5)"

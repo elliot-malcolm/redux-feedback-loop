@@ -3,6 +3,17 @@ import { connect } from 'react-redux';
 
 
 class Confirmation extends Component {
+
+  nextFeedbackPage = () => {
+    this.props.history.push('/feedbackstart');
+}
+  
+  restartFeedback = () => {
+    this.props.dispatch({
+    type:'CLEAR' })
+    this.nextFeedbackPage();
+}
+
   render() {
     return (
             <div>

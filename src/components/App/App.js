@@ -8,6 +8,7 @@ import Comments from '../Comments/Comments';
 import Understanding from '../Understanding/Understanding';
 import Review from '../Review/Review';
 import FeedbackStart from '../FeedbackStart/FeedbackStart';
+import Confirmation from '../Confirmation/Confirmation';
 
 class App extends Component {
 
@@ -22,12 +23,6 @@ class App extends Component {
             <h1 className="App-title">Feedback!</h1>
             <h4><i>Tell us how we're doin!</i></h4>
           </header>
-          {/* <Feeling/>
-          <Supported/>
-          <Comments/>
-          <Understanding/>
-          <FeedbackStart/> */}
-          {/* <Review/> */}
           <br/>
         </div>
         <Route exact path="/" component={FeedbackStart}/>
@@ -36,7 +31,7 @@ class App extends Component {
         <Route path="/supported" component={Supported}/>
         <Route path="/comments" component={Comments}/>
         <Route path="/review" component={Review}/>
-        <Route path="/confirmation" component={Confirmation}
+        <Route path="/confirmation" component={Confirmation}/>
       </Router>
     );
   }

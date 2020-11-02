@@ -32,9 +32,6 @@ class Supported extends Component {
             <div className="formInput">
                     <h1>How well are you being supported?</h1>
                     <form onSubmit={this.submitSupport}>
-                    <label htmlFor='Support'>
-                        How well are you being supported?
-                    </label>
                     <p><input 
                     type="number"
                     placeholder="(from 1-5)"

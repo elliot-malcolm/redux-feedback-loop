@@ -9,7 +9,7 @@ nextFeedbackPage = () => {
 }
 
 submitFeedback = () => {
-    Axios.post( '/feedbackrepo', this.props.reduxState.feedbackData )
+    Axios.post( '/feedbackrepo', this.props.reduxState.feedbackData.state )
         this.nextFeedbackPage();
     }
 
