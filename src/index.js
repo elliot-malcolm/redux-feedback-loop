@@ -7,6 +7,21 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 
+// const feedbackData 
+    // if action type = FEELING
+    // takes in payload
+
+    // if action type = UNDERSTANDING
+    // takes in payload
+    
+    // if action type = COMMENTS
+    // takes in payload
+
+    // if action type = SUPPORTED
+    // takes in payload
+
+
+
 const reduxStore = createStore (
     combineReducers({
     }),

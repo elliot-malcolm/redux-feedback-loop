@@ -9,6 +9,10 @@ import Comments from '../Comments/Comments';
 import Understanding from '../Understanding/Understanding';
 
 class App extends Component {
+
+  //axios post to database
+  
+
   render() {
     return (
       <Router>
@@ -21,9 +25,10 @@ class App extends Component {
           <Supported/>
           <Comments/>
           <Understanding/>
+
           <br/>
         </div>
-        <Route exact path="/" component={Feeling}/>
+        <Route exact path="/feeling" component={Feeling}/>
       </Router>
     );
   }

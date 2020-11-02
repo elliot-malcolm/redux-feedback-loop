@@ -4,8 +4,30 @@ import { connect } from 'react-redux';
 
 class Feeling extends Component {
 
-    //handleChange dispatch 
-    //submitFeels
+    state = {
+        feeling: '',
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            feeling: event.target.value
+        });
+    }
+
+    nextFeedbackPage = () => {
+        this.props.history.push('/Understanding');
+    }
+
+    submitFeels = () => {
+        this.props.dispatch({
+            type:'FEELINGS_FEEDBACK', payload: this.state.feeling})
+            console.log('from submitFeels', this.state);
+            this.nextFeedbackPage();
+    }
+
+    // [] submitFeels dispatches value to redux prop 
+        // [√]handleChange to assign data to state
+        // [√] nextPageRoute routes to next page 
 
   render() {
     return (
@@ -18,7 +40,7 @@ class Feeling extends Component {
                     <p><input 
                     type="number"
                     placeholder="Feels (1-5)"
-                    onChange={this.changeDistance}
+                    onChange={this.handleChange}
                     ></input></p>
                     <button className="nextButton">Next</button>
                     </form>
