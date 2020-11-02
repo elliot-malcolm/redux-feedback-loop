@@ -17,8 +17,8 @@ class FeedbackStart extends Component {
             </div>
     );
   }
-}
+};
 
-const reduxToProps = (reduxState) => ({reduxState: reduxState})
+const reduxToProps = (reduxState) => ({reduxState: reduxState});
 
 export default connect(reduxToProps)(FeedbackStart);

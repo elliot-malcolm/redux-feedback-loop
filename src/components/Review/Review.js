@@ -9,8 +9,11 @@ nextFeedbackPage = () => {
 }
 
 submitFeedback = () => {
-    Axios.post( '/feedbackrepo', this.props.reduxState.feedbackData.state )
+    Axios.post( '/feedbackrepo', this.props.reduxState.feedbackData ).then ((response) => {
         this.nextFeedbackPage();
+    }).catch((error)=>{
+        console.log(error);
+    })
     }
 
   render() {

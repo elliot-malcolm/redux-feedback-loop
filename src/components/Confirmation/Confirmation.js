@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 class Confirmation extends Component {
 
   nextFeedbackPage = () => {
-    this.props.history.push('/feedbackstart');
+    this.props.history.push('/');
 }
   
   restartFeedback = () => {
     this.props.dispatch({
-    type:'CLEAR' })
+    type:'CLEAR_INPUTS' })
     this.nextFeedbackPage();
 }
 
@@ -18,7 +18,7 @@ class Confirmation extends Component {
     return (
             <div>
                 <h2> Your feedback has been successfully submitted! </h2>
-                {/* <button onClick=axiosPost>Submit More Feedback!<button> */}
+                <button onClick={this.restartFeedback}>Submit More Feedback!</button>
             </div>
     );
   }
