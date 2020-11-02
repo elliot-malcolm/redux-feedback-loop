@@ -34,7 +34,6 @@ class Comments extends Component {
                         Any comments you want to leave?
                     </label>
                     <p><input 
-                    id="textboxid"
                     type="text"
                     placeholder="Comments here!"
                     onChange={this.handleChange}

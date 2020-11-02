@@ -1,0 +1,10 @@
+.Review {
+    text-align: center;
+  }
+
+.Review-header {
+    background-color: #033076;
+    min-height: 70px;
+    padding: 20px;
+    color: white;
+  }

@@ -20,9 +20,6 @@ class Supported extends Component {
     submitSupport = () => {
         if (Number(this.state.support) < 1 || Number(this.state.support) > 5) {
             alert ('Please enter a valid rating between 1 and 5')
-        }
-        else if (this.state.support = '') {
-            alert ('Please enter a rating for your support!')
         } else {
         this.props.dispatch({
             type:'SUPPORTED_FEEDBACK', payload: this.state.support})

@@ -20,9 +20,6 @@ class Understanding extends Component {
     submitUnderstanding = () => {
         if (Number(this.state.understanding) < 1 || Number(this.state.understanding) > 5) {
             alert ('Please enter a valid rating between 1 and 5')
-        }
-        else if (this.state.understanding = '') {
-            alert ('Please enter a rating for your understanding!')
         } else {
         this.props.dispatch({
             type:'UNDERSTANDING_FEEDBACK', payload: this.state.understanding})

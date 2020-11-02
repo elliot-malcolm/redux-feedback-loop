@@ -21,12 +21,10 @@ class Feeling extends Component {
         if (Number(this.state.feeling) < 1 || Number(this.state.feeling) > 5) {
             alert ('Please enter a valid rating between 1 and 5')
         }
-        else if (this.state.feeling = '') {
-            alert ('Please enter a rating for your feels!')
-        } else {
-        this.props.dispatch({
+        // else if (this.state.feeling = '') {
+        //     alert ('Please enter a rating for your feels!')
+        else {        this.props.dispatch({
             type:'FEELINGS_FEEDBACK', payload: this.state.feeling})
-            console.log('from submitFeels', this.state);
             this.nextFeedbackPage();
         }
     }
@@ -36,9 +34,9 @@ class Feeling extends Component {
             <div className="formInput">
                     <h1>How are you feeling today?</h1>
                     <form onSubmit={this.submitFeels}>
-                    <label htmlFor='Feeling'>
+                    {/* <label htmlFor='Feeling'>
                         How are you feeling today?
-                    </label>
+                    </label> */}
                     <p><input 
                     type="number"
                     placeholder="(from 1-5)"

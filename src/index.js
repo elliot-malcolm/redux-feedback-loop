@@ -7,23 +7,29 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 
-// const feedbackData 
-
-    // if action type = FEELING
-    // takes in payload
-
-    // else if action type = UNDERSTANDING
-    // takes in payload
-    
-    // else if action type = COMMENTS
-    // takes in payload
-
-    // else if action type = SUPPORTED
-    // takes in payload
-
+const feedbackData = (state = {}, action) => {
+    if (action.type === 'FEELINGS_FEEDBACK'){
+        console.log('payload', action.payload);
+        return {...state, feeling: action.payload}
+    }
+    else if (action.type === 'UNDERSTANDING_FEEDBACK'){
+        console.log('payload', action.payload);
+        return {...state, understanding: action.payload}
+    }
+    else if (action.type === 'SUPPORTED_FEEDBACK'){
+        console.log('payload', action.payload);
+        return {...state, support: action.payload}
+    }
+    else if (action.type === 'COMMENT_FEEDBACK'){
+        console.log('payload', action.payload);
+        return {...state, comment: action.payload}
+    }
+    else return state
+}
 
 const reduxStore = createStore (
     combineReducers({
+    feedbackData,
     }),
     applyMiddleware(logger)
   );
