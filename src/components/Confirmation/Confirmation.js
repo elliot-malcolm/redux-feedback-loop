@@ -4,10 +4,12 @@ import { connect } from 'react-redux';
 
 class Confirmation extends Component {
 
+  //route to next page
   nextFeedbackPage = () => {
     this.props.history.push('/');
 }
   
+  //trigger redux to clear inputs
   restartFeedback = () => {
     this.props.dispatch({
     type:'CLEAR_INPUTS' })

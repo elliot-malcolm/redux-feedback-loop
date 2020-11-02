@@ -12,9 +12,6 @@ import Confirmation from '../Confirmation/Confirmation';
 
 class App extends Component {
 
-  //axios post to database
-
-
   render() {
     return (
       <Router>
@@ -25,6 +22,7 @@ class App extends Component {
           </header>
           <br/>
         </div>
+        //page routes
         <Route exact path="/" component={FeedbackStart}/>
         <Route path="/feeling" component={Feeling}/>
         <Route path="/understanding" component={Understanding}/>

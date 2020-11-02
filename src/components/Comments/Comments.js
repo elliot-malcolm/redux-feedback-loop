@@ -6,16 +6,19 @@ class Comments extends Component {
         comment: '',
     }
 
+    //handle data input
     handleChange = (event) => {
         this.setState({
             comment: event.target.value
         });
     }
 
+    //route to next page
     nextFeedbackPage = () => {
         this.props.history.push('/review');
     }
 
+    //submit comment info to redux for storage and manipulation
     submitComment = () => {
 
         this.props.dispatch({

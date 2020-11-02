@@ -3,20 +3,24 @@ import { connect } from 'react-redux';
 import './Supported.css'
 
 class Supported extends Component {
+
     state = {
         support: '',
     }
 
+    //handle input value
     handleChange = (event) => {
         this.setState({
             support: event.target.value
         });
     }
 
+    //route to next page
     nextFeedbackPage = () => {
         this.props.history.push('/comments');
     }
 
+    //validate input data, and send data to redux state
     submitSupport = () => {
         if (Number(this.state.support) < 1 || Number(this.state.support) > 5 || this.state.support === '' ) {
             alert ('Please enter a valid rating between 1 and 5');

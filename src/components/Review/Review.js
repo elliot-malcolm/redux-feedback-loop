@@ -4,10 +4,12 @@ import Axios from 'axios';
 
 class Review extends Component {
 
+//route to next page
 nextFeedbackPage = () => {
     this.props.history.push('/confirmation');
 }
 
+//send data to serve via POST, send user to next page and log errors
 submitFeedback = () => {
     Axios.post( '/feedbackrepo', this.props.reduxState.feedbackData ).then ((response) => {
         this.nextFeedbackPage();
@@ -16,6 +18,7 @@ submitFeedback = () => {
     })
     }
 
+    //display reduxState collected review data on DOM 
   render() {
     return (
             <div className='reviewInfo'>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 class FeedbackStart extends Component {
 
+  //route to next page
     nextFeedbackPage = () => {
         this.props.history.push('/feeling');
     }

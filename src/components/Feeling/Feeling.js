@@ -8,16 +8,19 @@ class Feeling extends Component {
         feeling: '',
     }
 
+     //handle input value
     handleChange = (event) => {
         this.setState({
             feeling: event.target.value
         });
     }
 
+    //route to next page
     nextFeedbackPage = () => {
         this.props.history.push('/understanding');
     }
 
+    //validate input data, and send data to redux state
     submitFeels = () => {
         if (Number(this.state.feeling) < 1 || Number(this.state.feeling) > 5 || this.state.feeling === '' ) {
             alert ('Please enter a valid rating between 1 and 5')

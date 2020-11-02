@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
+
+//reducer responds to feedback dispatches
 const feedbackData = (state = {}, action) => {
     if (action.type === 'FEELINGS_FEEDBACK'){
         console.log('payload', action.payload);
@@ -23,14 +25,7 @@ const feedbackData = (state = {}, action) => {
         console.log('payload', action.payload);
         return {...state, comment: action.payload}
     }
-    // else if (action.type === 'SUBMIT_FEEDBACK'){
-    //     axios.post( '/feedbackrepo', this.state ).then( (response )=>{
-    //         console.log( response );
-    //     }).catch(( error )=>{
-    //         console.log( error );
-    //     });
-    //     return {}
-    // )};
+    //reducer clears inputs upon ping
     else if (action.type === 'CLEAR_INPUTS'){
         return {}
     } 
@@ -38,6 +33,7 @@ const feedbackData = (state = {}, action) => {
     }
 }
 
+//establish reduxStore
 const reduxStore = createStore (
     combineReducers({
     feedbackData,
