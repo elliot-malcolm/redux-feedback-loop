@@ -1,9 +1,6 @@
 # Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Redux Feedback Loop at Prime Academy 
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This app allows a participant to add review information about the quality of an experience through a series of four forms.  The information is collected and sent to a database for analysis or tabulation.
