@@ -7,11 +7,13 @@ import Feeling from '../Feeling/Feeling';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import Understanding from '../Understanding/Understanding';
+import Review from '../Review/Review';
+import FeedbackStart from '../FeedbackStart/FeedbackStart';
 
 class App extends Component {
 
   //axios post to database
-  
+
 
   render() {
     return (
@@ -21,14 +23,19 @@ class App extends Component {
             <h1 className="App-title">Feedback!</h1>
             <h4><i>Tell us how we're doin!</i></h4>
           </header>
-          <Feeling/>
+          {/* <Feeling/>
           <Supported/>
           <Comments/>
           <Understanding/>
-
+          <FeedbackStart/> */}
           <br/>
         </div>
-        <Route exact path="/feeling" component={Feeling}/>
+        <Route exact path="/" component={FeedbackStart}/>
+        <Route path="/feeling" component={Feeling}/>
+        <Route path="/understanding" component={Understanding}/>
+        <Route path="/supported" component={Supported}/>
+        <Route path="/comments" component={Comments}/>
+        <Route path="/review" component={Review}/>
       </Router>
     );
   }

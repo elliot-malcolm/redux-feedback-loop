@@ -11,17 +11,16 @@ import registerServiceWorker from './registerServiceWorker';
     // if action type = FEELING
     // takes in payload
 
-    // if action type = UNDERSTANDING
+    // else if action type = UNDERSTANDING
     // takes in payload
     
-    // if action type = COMMENTS
+    // else if action type = COMMENTS
     // takes in payload
 
-    // if action type = SUPPORTED
+    // else if action type = SUPPORTED
     // takes in payload
 
-
-
+    
 const reduxStore = createStore (
     combineReducers({
     }),
