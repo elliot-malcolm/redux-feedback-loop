@@ -8,7 +8,6 @@ class FeedbackStart extends Component {
         this.props.history.push('/feeling');
     }
 
-
   render() {
     return (
             <div className="formInput">
